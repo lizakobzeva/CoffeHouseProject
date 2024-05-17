@@ -15,11 +15,15 @@ const App = () => {
       <Suspense fallback="">
         <NavBar />
 
-        <div className="container">
-          <Suspense fallback={<Loader />}>
-            <Router />
-          </Suspense>
-        </div>
+        <Suspense
+          fallback={
+            <div className="container">
+              <Loader />
+            </div>
+          }
+        >
+          <Router />
+        </Suspense>
       </Suspense>
     </div>
   );

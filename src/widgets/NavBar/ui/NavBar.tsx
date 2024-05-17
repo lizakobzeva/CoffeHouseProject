@@ -25,9 +25,9 @@ const NavBar = () => {
             className={({ isActive }) =>
               isActive ? style.activeLink : style.link
             }
-            to={"/"}
+            to={"/coffee"}
           >
-            Main
+            Coffee
           </NavLink>
           <NavLink
             className={({ isActive }) =>
@@ -42,6 +42,7 @@ const NavBar = () => {
         <div className={style.auth}>
           <Button onClick={() => setIsModal(true)}>{t("Log In")}</Button>
         </div>
+
         <LoginRegisterModal
           isOpend={IsModal}
           onClose={() => setIsModal(false)}

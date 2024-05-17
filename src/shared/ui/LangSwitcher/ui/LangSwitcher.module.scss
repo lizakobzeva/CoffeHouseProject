@@ -9,6 +9,7 @@ ul {
   flex-direction: column;
   background: var(--accent);
   padding: 10px 20px;
+  z-index: 50px;
 }
 
 li {
