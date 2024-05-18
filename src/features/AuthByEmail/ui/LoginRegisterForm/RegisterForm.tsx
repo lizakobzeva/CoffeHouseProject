@@ -1,43 +1,60 @@
 import style from "./LoginRegisterForm.module.scss";
 import Button from "shared/ui/Button";
+import { SubmitHandler, useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
+import { useAppDispatch } from "app/providers/StoreProvider";
+import { RegisterByEmail } from "../../model/services/RegisterByEmail/RegisterByEmail";
+import { getRegister } from "features/AuthByEmail/model/selectors/getRegister/getRegister";
+
+type Inputs = {
+  name: string;
+  email: string;
+  password: string;
+};
 
 const RegisterForm = () => {
   const { t } = useTranslation();
+  const dispatch = useAppDispatch();
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm<Inputs>();
+
+  const { name, email, password, error, isLoading } = useSelector(getRegister);
+
+  const onSubmit: SubmitHandler<Inputs> = (data) => {
+    dispatch(RegisterByEmail(data));
+  };
   return (
-    <form className={style.centerWrap}>
+    <form onSubmit={handleSubmit(onSubmit)} className={style.centerWrap}>
+      {error && <h4 className={style.errorTitle}>Ошибка при регистрации</h4>}
       <h4 className={style.cardTitle}>{t("Sign Up")}</h4>
       <div className={style.formGroup}>
         <input
+          {...register("name", { required: true })}
           type="text"
-          name="logname"
-          className={style.formStyle}
-          placeholder={t("Your Full Name")}
-          id="logname"
-          autoComplete="off"
-        />
-      </div>
-      <div className={style.formGroup}>
-        <input
-          type="email"
-          name="logemail"
           className={style.formStyle}
           placeholder={t("Your Email")}
-          id="logemail"
-          autoComplete="off"
         />
-        <i className={style.inputIcon}></i>
       </div>
       <div className={style.formGroup}>
         <input
+          {...register("email", { required: true })}
+          type="email"
+          className={style.formStyle}
+          placeholder={t("Your Email")}
+        />
+      </div>
+      <div className={style.formGroup}>
+        <input
+          {...register("password", { required: true })}
           type="password"
-          name="logpass"
           className={style.formStyle}
           placeholder={t("Your Password")}
-          id="logpass"
-          autoComplete="off"
         />
-        <i className={style.inputIcon}></i>
       </div>
       <Button>{t("Submit")}</Button>
     </form>

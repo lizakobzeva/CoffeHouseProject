@@ -4,6 +4,29 @@
       "id": "1",
       "email": "liza@list.ru",
       "password": "123456"
+    },
+    {
+      "email": "qwretrcyg@vuhbijlokl",
+      "password": "$2a$10$bkEYmYrdXrjXySZM0PqoluVItmeKQe5NukQqHdpXfoiJkoLszdqDW",
+      "id": "VsmPF6R"
+    },
+    {
+      "email": "dfadsfasd@dfa",
+      "password": "$2a$10$MKb9nllcFO9enf4xkmmPlOqsuduY09231SvgwCGroMdqdEOkCIa9e",
+      "name": "qwretrcyg@vuhbijlokl",
+      "id": "s6_kWJS"
+    },
+    {
+      "email": "lizakob@list.ru",
+      "password": "$2a$10$9ctU25pHH2f80IBPzjyRIOG7inyoMCFVWg0lr.9dSu1kIZoXePTd6",
+      "name": "liza",
+      "id": "YRzMai_"
+    },
+    {
+      "email": "lizakobzeva@list.ru",
+      "password": "$2a$10$CI4VHdIA5kY0jJwXBURfuOXShwYrhTgGUY0YhrOc6TKRK7WjBYPia",
+      "name": "lizakobzeva",
+      "id": "5wwFJzp"
     }
   ]
 }

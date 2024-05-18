@@ -4,8 +4,8 @@ import { useTranslation } from "react-i18next";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useAppDispatch } from "app/providers/StoreProvider";
 import { LoginByEmail } from "../../model/services/LoginByEmail/LoginByEmail";
-import { getError } from "../../model/selectors/getError/getError";
 import { useSelector } from "react-redux";
+import { getLogin } from "features/AuthByEmail/model/selectors/getLogin/getLogin";
 
 type Inputs = {
   email: string;
@@ -22,16 +22,15 @@ const LoginForm = () => {
     formState: { errors },
   } = useForm<Inputs>();
 
-  const isError = useSelector(getError);
+  const { email, password, error, isLoading } = useSelector(getLogin);
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
+    console.log("click login");
     dispatch(LoginByEmail(data));
   };
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={style.centerWrap}>
-      {isError && (
-        <h4 className={style.errorTitle}>Неверный логин или пароль</h4>
-      )}
+      {error && <h4 className={style.errorTitle}>Неверный логин или пароль</h4>}
       <h4 className={style.cardTitle}>{t("Log In")}</h4>
       <div className={style.formGroup}>
         <input
