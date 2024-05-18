@@ -17,6 +17,10 @@
   }
 }
 
+.errorTitle {
+  color: var(--error-color);
+}
+
 .link {
   cursor: pointer;
   transition: all 200ms linear;

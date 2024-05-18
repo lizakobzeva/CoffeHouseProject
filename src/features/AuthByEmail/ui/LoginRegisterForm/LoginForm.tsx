@@ -29,7 +29,9 @@ const LoginForm = () => {
   };
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={style.centerWrap}>
-      {isError && <h4>Неверный логин или пароль</h4>}
+      {isError && (
+        <h4 className={style.errorTitle}>Неверный логин или пароль</h4>
+      )}
       <h4 className={style.cardTitle}>{t("Log In")}</h4>
       <div className={style.formGroup}>
         <input

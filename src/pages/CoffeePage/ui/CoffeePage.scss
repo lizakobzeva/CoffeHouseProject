@@ -448,7 +448,7 @@ $recipe-cup-offset: 0.4 * $device-width;
 .steam {
   width: 1rem;
   height: 1rem;
-  color: var(--color4);
+  color: white;
 
   position: absolute;
   bottom: 0;
@@ -560,7 +560,10 @@ $recipe-cup-offset: 0.4 * $device-width;
 
 .coffee-controls {
   transition: all 0.5s 0 $animation-easing;
-  display: block;
+  // display: block;
+  display: flex;
+  align-items: center;
+  gap: 20px;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -571,29 +574,10 @@ $recipe-cup-offset: 0.4 * $device-width;
   font-size: 1rem;
   transform: translateY(100%);
   opacity: 0;
-}
-
-[type="reset"] {
-  transition: all 0.5s $animation-easing;
-  display: block;
-  position: relative;
-  bottom: 0;
-  margin-left: auto;
-  margin-right: auto;
-  appearance: none;
-  -moz-appearance: none;
-  background: transparent;
-  color: $color-text-light;
-  border: 1px solid currentColor;
-  padding: 1rem 2rem;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  opacity: 0;
-
-  &:hover {
-    color: $color-app;
-    background: $color-text-light;
+  button {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
   }
 }
 

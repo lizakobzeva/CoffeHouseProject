@@ -4,11 +4,12 @@ import style from "./Button.module.scss";
 interface ButtonProps {
   children: ReactNode;
   onClick?: () => void;
+  type?: "button" | "submit" | "reset";
 }
 
-const Button: React.FC<ButtonProps> = ({ children, onClick }) => {
+const Button: React.FC<ButtonProps> = ({ children, onClick, type }) => {
   return (
-    <button onClick={onClick} className={style.button}>
+    <button type={type} onClick={onClick} className={style.button}>
       {children}
     </button>
   );
