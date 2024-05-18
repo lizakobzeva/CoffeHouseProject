@@ -5,7 +5,7 @@
   border-radius: 10px;
   background-color: var(--color2);
   color: var(--color1);
-  filter: drop-shadow(1px 1px 1px black);
+  filter: drop-shadow(1px 1px 1px var(--color6));
 }
 .button:active {
   scale: 0.95;

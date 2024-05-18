@@ -25,7 +25,7 @@ const NavBar = () => {
             className={({ isActive }) =>
               isActive ? style.activeLink : style.link
             }
-            to={"/coffee"}
+            to={"/"}
           >
             Coffee
           </NavLink>

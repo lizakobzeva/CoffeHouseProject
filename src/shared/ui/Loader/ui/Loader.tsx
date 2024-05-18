@@ -1,7 +1,7 @@
 import style from "./Loader.module.scss";
-const PageLoader = () => {
+const Loader = () => {
   return (
-    <div className={style.PageLoader}>
+    <div className={style.Loader}>
       <div className={style.wrapper}>
         <div className={style.circle}></div>
         <div className={style.circle}></div>
@@ -15,4 +15,4 @@ const PageLoader = () => {
   );
 };
 
-export default PageLoader;
+export default Loader;
