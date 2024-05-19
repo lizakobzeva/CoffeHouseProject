@@ -168,15 +168,16 @@
   }
 
   .coffee-cup {
+    cursor: default;
+    z-index: 0;
     width: $coffee-cup-height;
     height: $coffee-cup-height;
     border-style: solid;
     border-color: $color-cup;
     border-width: 0.5rem;
-    // border-top-width: 0;
     margin: auto;
     animation: cup-inactive 0.5s $animation-easing both;
-    transition: opacity 0.5s $animation-easing;
+    transition: opacity 0.25s $animation-easing;
     opacity: 0;
 
     &:after {
@@ -244,6 +245,7 @@
   [class^="recipe-"] {
     white-space: nowrap;
     overflow-x: hidden;
+
     opacity: 0;
     top: 0.5rem;
     transition-property: height;
@@ -371,6 +373,8 @@
 
       .coffee-cup {
         opacity: 1;
+        cursor: pointer;
+        z-index: 1;
       }
     }
 
@@ -551,7 +555,7 @@
       transform: translateX(0);
     }
     100% {
-      transform: translateX(2 * $coffee-cup-width);
+      transform: translateX(5 * $coffee-cup-width);
     }
   }
 

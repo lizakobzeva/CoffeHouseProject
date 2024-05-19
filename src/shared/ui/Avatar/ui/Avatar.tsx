@@ -1,11 +1,8 @@
-import { useSelector } from "react-redux";
 import style from "./Avatar.module.scss";
-import { getAuthData } from "entities/User/model/selectors/getAuthData/getAuthData";
 import { useState } from "react";
-import { Variants, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useAppDispatch } from "app/providers/StoreProvider";
 import { logout } from "entities/User/model/slice/UserSlice";
-import { json } from "stream/consumers";
 
 interface AvatarProps {
   name: string;
