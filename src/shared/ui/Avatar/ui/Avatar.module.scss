@@ -2,42 +2,36 @@
   filter: drop-shadow(1px 1px 1px var(--color6));
   width: 130px;
   height: 40px;
-  ul {
-    display: flex;
-    flex-direction: column;
-    background: var(--accent);
-    padding: 10px 20px;
-    z-index: 50px;
-  }
+  // .subMenu {
+  //   display: flex;
+  //   flex-direction: column;
+  //   background: var(--color2);
+  //   padding: 10px 20px;
+  //   z-index: 50px;
+  //   cursor: pointer;
+  // }
 
-  li {
-    color: var(--background);
-    display: block;
+  // li {
+  //   color: var(--background);
+  //   display: flex;
 
-    cursor: pointer;
-  }
+  //   cursor: pointer;
+  // }
 
-  ul,
-  li {
+  .subMenu {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     font-weight: 600;
     list-style: none;
     margin: 0;
-    gap: 10px;
+    padding: 10px 20px;
     background-color: var(--color2);
     color: var(--color1);
     max-width: 100%;
     p {
       transition: 100ms;
       width: 100%;
-    }
-  }
-  li:hover {
-    p {
-      scale: 1.1;
-      transition: 200ms;
     }
   }
 
@@ -52,7 +46,7 @@
     color: var(--background);
     border: none;
     border-radius: 10px;
-    padding: 10px 20px;
+    padding: 5px 20px;
     font-size: 15px;
     font-weight: 700;
     cursor: pointer;
@@ -70,4 +64,11 @@
     fill: var(--color1);
     font-family: sofia-pro, sans-serif;
   }
+}
+
+.InAccount {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

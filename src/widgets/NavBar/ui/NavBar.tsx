@@ -5,13 +5,32 @@ import { classNames } from "shared/lib/classNames/classNames";
 import Button from "shared/ui/Button";
 import ToggleThemButton from "shared/ui/ToggleThemeButton";
 import LangSwitcher from "shared/ui/LangSwitcher";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { LoginRegisterModal } from "features/AuthByEmail/ui";
+import { USER_LOCALSTORAGE_KEY } from "shared/const/localStorage";
+import { useAppDispatch } from "app/providers/StoreProvider";
+
+import { useSelector } from "react-redux";
+import { getAuthData } from "entities/User/model/selectors/getAuthData/getAuthData";
+import Avatar from "shared/ui/Avatar";
 
 const NavBar = () => {
   const [IsModal, setIsModal] = useState(false);
   const { t } = useTranslation();
+  const dispatch = useAppDispatch();
+
+  const user = localStorage.getItem(USER_LOCALSTORAGE_KEY);
+  const authData = useSelector(getAuthData);
+  let name = undefined;
+  if (user) {
+    name = JSON.parse(user).user.name;
+  }
+
+  useEffect(() => {
+    setIsModal(false);
+  }, [user, authData]);
+
   return (
     <div className={classNames(style.navbar, {}, [])}>
       <div className={style.container}>
@@ -40,7 +59,11 @@ const NavBar = () => {
         </div>
 
         <div className={style.auth}>
-          <Button onClick={() => setIsModal(true)}>{t("Log In")}</Button>
+          {user ? (
+            <Avatar name={name} />
+          ) : (
+            <Button onClick={() => setIsModal(true)}>{t("Log In")}</Button>
+          )}
         </div>
 
         <LoginRegisterModal
@@ -48,7 +71,6 @@ const NavBar = () => {
           onClose={() => setIsModal(false)}
         />
       </div>
-      {/* <BurgerMenu /> */}
     </div>
   );
 };

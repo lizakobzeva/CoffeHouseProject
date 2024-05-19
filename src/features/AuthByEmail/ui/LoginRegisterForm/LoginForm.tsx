@@ -25,7 +25,6 @@ const LoginForm = () => {
   const { email, password, error, isLoading } = useSelector(getLogin);
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
-    console.log("click login");
     dispatch(LoginByEmail(data));
   };
   return (

@@ -1,6 +1,8 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import { setAuthData } from "entities/User/model/slice/UserSlice";
 import { User } from "entities/User/model/types/user";
+import { USER_LOCALSTORAGE_KEY } from "shared/const/localStorage";
 
 export interface LoginByEmailTypes {
   email: string;
@@ -8,16 +10,20 @@ export interface LoginByEmailTypes {
 }
 export const LoginByEmail = createAsyncThunk(
   "login/loginByEmail",
-  async (authData: LoginByEmailTypes, thunckAPI) => {
+  async (authData: LoginByEmailTypes, thunkAPI) => {
     try {
       const response = await axios.post<User>(
         "http://localhost:8000/login",
         authData
       );
-      console.log(response.data);
+      localStorage.setItem(
+        USER_LOCALSTORAGE_KEY,
+        JSON.stringify(response.data)
+      );
+      thunkAPI.dispatch(setAuthData(response.data));
       return response.data;
     } catch (e) {
-      return thunckAPI.rejectWithValue("error");
+      return thunkAPI.rejectWithValue("error");
     }
   }
 );
