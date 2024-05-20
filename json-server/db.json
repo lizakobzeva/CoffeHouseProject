@@ -1,32 +1,37 @@
 {
   "users": [
     {
-      "id": "1",
-      "email": "liza@list.ru",
-      "password": "123456"
-    },
-    {
-      "email": "qwretrcyg@vuhbijlokl",
-      "password": "$2a$10$bkEYmYrdXrjXySZM0PqoluVItmeKQe5NukQqHdpXfoiJkoLszdqDW",
-      "id": "VsmPF6R"
-    },
-    {
-      "email": "dfadsfasd@dfa",
-      "password": "$2a$10$MKb9nllcFO9enf4xkmmPlOqsuduY09231SvgwCGroMdqdEOkCIa9e",
-      "name": "qwretrcyg@vuhbijlokl",
-      "id": "s6_kWJS"
+      "email": "saha@ldif.com",
+      "password": "$2a$10$LpWLbjNa8jVzzXnJ8ctg4./Q9tiGLYQ0HyCSzoP8UXe3mrjKF1zNm",
+      "name": "sasha",
+      "cart": [
+        ""
+      ],
+      "id": "x6ug4cY"
     },
     {
       "email": "lizakob@list.ru",
-      "password": "$2a$10$9ctU25pHH2f80IBPzjyRIOG7inyoMCFVWg0lr.9dSu1kIZoXePTd6",
+      "password": "$2a$10$Q0hgfbgK37atLLp0UF1Q3ONJl2zrqTF6z/otstqkcf96UBIo1YNfy",
       "name": "liza",
-      "id": "YRzMai_"
+      "cart": [
+        "coffee1",
+        "coffee2",
+        "coffee3",
+        "coffee",
+        "coffee",
+        "coffee"
+      ],
+      "id": "sStloF8",
+      "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxpemFrb2JAbGlzdC5ydSIsImlhdCI6MTcxNjE5Mjk3NywiZXhwIjoxNzE2MTk2NTc3LCJzdWIiOiJzU3Rsb0Y4In0.Fu92NdGCwbu8B9MIeBjH47q1LBcAeJRIcqtr7pj-nE4"
     },
     {
       "email": "lizakobzeva@list.ru",
-      "password": "$2a$10$CI4VHdIA5kY0jJwXBURfuOXShwYrhTgGUY0YhrOc6TKRK7WjBYPia",
+      "password": "$2a$10$E5Tlqq3/k3E74ayXS6p3JOEZMB3BjFHVE.0w5Hgfgki2n/xX2RlRq",
       "name": "lizakobzeva",
-      "id": "5wwFJzp"
+      "cart": [
+        ""
+      ],
+      "id": "RYI6LFU"
     }
   ]
 }

@@ -8,21 +8,22 @@ export interface RegisterByEmailTypes {
   name: string;
   email: string;
   password: string;
+  cart: Array<string>;
 }
 export const RegisterByEmail = createAsyncThunk(
   "register/registerByEmail",
   async (authData: RegisterByEmailTypes, thunkAPI) => {
     try {
-      const response = await axios.post<User>(
+      const response = await axios.post(
         "http://localhost:8000/register",
         authData
       );
 
       localStorage.setItem(
         USER_LOCALSTORAGE_KEY,
-        JSON.stringify(response.data)
+        JSON.stringify(response.data.user)
       );
-      thunkAPI.dispatch(setAuthData(response.data));
+      thunkAPI.dispatch(setAuthData(response.data.user));
 
       return response.data;
     } catch (e) {

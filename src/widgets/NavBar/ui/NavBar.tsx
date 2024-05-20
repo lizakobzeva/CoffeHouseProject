@@ -22,10 +22,6 @@ const NavBar = () => {
 
   const user = localStorage.getItem(USER_LOCALSTORAGE_KEY);
   const authData = useSelector(getAuthData);
-  let name = undefined;
-  if (user) {
-    name = JSON.parse(user).user.name;
-  }
 
   useEffect(() => {
     setIsModal(false);
@@ -60,7 +56,7 @@ const NavBar = () => {
 
         <div className={style.auth}>
           {user ? (
-            <Avatar name={name} />
+            <Avatar />
           ) : (
             <Button onClick={() => setIsModal(true)}>{t("Log In")}</Button>
           )}

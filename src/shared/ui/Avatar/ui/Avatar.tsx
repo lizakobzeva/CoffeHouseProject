@@ -3,14 +3,20 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { useAppDispatch } from "app/providers/StoreProvider";
 import { logout } from "entities/User/model/slice/UserSlice";
+import { USER_LOCALSTORAGE_KEY } from "shared/const/localStorage";
 
-interface AvatarProps {
-  name: string;
-}
+// interface AvatarProps {
+//   name: string;
+// }
 
-const Avatar = ({ name }: AvatarProps) => {
+const Avatar = () => {
   const dispatch = useAppDispatch();
   const [isOpen, setIsOpen] = useState(false);
+  const user = localStorage.getItem(USER_LOCALSTORAGE_KEY);
+  let name = undefined;
+  if (user) {
+    name = JSON.parse(user).name;
+  }
 
   const Logout = () => {
     dispatch(logout());

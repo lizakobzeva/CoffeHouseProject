@@ -11,6 +11,7 @@ type Inputs = {
   name: string;
   email: string;
   password: string;
+  cart: Array<string>;
 };
 
 const RegisterForm = () => {
@@ -26,7 +27,13 @@ const RegisterForm = () => {
   const { name, email, password, error, isLoading } = useSelector(getRegister);
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
-    dispatch(RegisterByEmail(data));
+    const dataReg = {
+      name: data.name,
+      email: data.email,
+      password: data.password,
+      cart: [""],
+    };
+    dispatch(RegisterByEmail(dataReg));
   };
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={style.centerWrap}>
