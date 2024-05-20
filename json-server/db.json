@@ -14,12 +14,21 @@
       "password": "$2a$10$Q0hgfbgK37atLLp0UF1Q3ONJl2zrqTF6z/otstqkcf96UBIo1YNfy",
       "name": "liza",
       "cart": [
-        "coffee1",
-        "coffee2",
-        "coffee3",
-        "coffee",
-        "coffee",
-        "coffee"
+        "doppio",
+        "flatwhite",
+        "doppio",
+        "bombon",
+        "macchiatto",
+        "macchiatto",
+        "bombon",
+        "macchiatto",
+        "macchiatto",
+        "macchiatto",
+        "cortado",
+        "americano",
+        "doppio",
+        "doppio",
+        "macchiatto"
       ],
       "id": "sStloF8",
       "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxpemFrb2JAbGlzdC5ydSIsImlhdCI6MTcxNjE5Mjk3NywiZXhwIjoxNzE2MTk2NTc3LCJzdWIiOiJzU3Rsb0Y4In0.Fu92NdGCwbu8B9MIeBjH47q1LBcAeJRIcqtr7pj-nE4"
@@ -32,6 +41,27 @@
         ""
       ],
       "id": "RYI6LFU"
+    },
+    {
+      "email": "cat@cat.com",
+      "password": "$2a$10$64.721nJCBbXIdPhkDynmundVrAIWS6TjAajcyCwkBQwd8wVeHqCa",
+      "name": "cat",
+      "cart": [
+        "",
+        "doppio",
+        "doppio",
+        "doppio",
+        "doppio",
+        "latte",
+        "latte",
+        "latte",
+        "latte",
+        "latte",
+        "mocha",
+        "doppio",
+        "mocha"
+      ],
+      "id": "-ba0hrx"
     }
   ]
 }

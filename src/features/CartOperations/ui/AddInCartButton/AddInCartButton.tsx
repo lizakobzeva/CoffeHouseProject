@@ -1,5 +1,6 @@
 import { useAppDispatch } from "app/providers/StoreProvider";
 import { getAuthData } from "entities/User/model/selectors/getAuthData/getAuthData";
+import { LoginRegisterModal } from "features/AuthByEmail/ui";
 import { AddItemInCart } from "features/CartOperations/model/services/AddItemInCart/AddItemInCart";
 import { useSelector } from "react-redux";
 import Button from "shared/ui/Button";
@@ -8,14 +9,14 @@ interface AddInCartButtonType {
   coffeeId: string;
 }
 
-const AddInCartButton = () => {
+const AddInCartButton = ({ coffeeId }: AddInCartButtonType) => {
   const dispatch = useAppDispatch();
   const { authData } = useSelector(getAuthData);
-  const cart: Array<string> = authData?.cart;
+  const cart: Array<string> = authData?.cart ? authData?.cart : [];
 
   const userData = {
     id: authData?.id,
-    cart: [...cart, "coffee"],
+    cart: [...cart, coffeeId],
   };
   const AddInCart = () => {
     console.log(userData);
