@@ -1,9 +1,8 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import { getAuthData } from "entities/User/model/selectors/getAuthData/getAuthData";
+import { SetItemInCart } from "entities/Cart/model/slice/CartSlice";
 import { setAuthData } from "entities/User/model/slice/UserSlice";
 import { User } from "entities/User/model/types/user";
-import { useSelector } from "react-redux";
 import { USER_LOCALSTORAGE_KEY } from "shared/const/localStorage";
 
 export interface AddItemInCartTypes {
@@ -25,7 +24,7 @@ export const AddItemInCart = createAsyncThunk(
         JSON.stringify(response.data)
       );
       thunkAPI.dispatch(setAuthData(response.data));
-
+      thunkAPI.dispatch(SetItemInCart(response.data.cart));
       return response.data;
     } catch (e) {
       return thunkAPI.rejectWithValue("error");

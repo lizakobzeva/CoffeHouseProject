@@ -8,12 +8,14 @@ import NavBar from "widgets/NavBar";
 import Loader from "shared/ui/Loader";
 import { useAppDispatch } from "./providers/StoreProvider";
 import { initAuthData } from "entities/User/model/slice/UserSlice";
+import { initCart } from "entities/Cart/model/slice/CartSlice";
 
 const App = () => {
   const { theme } = useTheme();
   const dispatch = useAppDispatch();
   useEffect(() => {
     dispatch(initAuthData());
+    dispatch(initCart());
   });
   return (
     <div className={classNames("app", {}, [theme])}>

@@ -20,6 +20,7 @@ const CoffeePage = () => {
     "doppio",
     "macchiatto",
     "cortado",
+    "cappuccino",
     "americano",
     "mocha",
     "latte",

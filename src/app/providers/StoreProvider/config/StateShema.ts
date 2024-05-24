@@ -1,3 +1,4 @@
+import { CartShema } from "entities/Cart/model/types/cart";
 import { CounterShema } from "entities/Counter";
 import { UserShema } from "entities/User";
 import { LoginShema } from "features/AuthByEmail/model/types/LoginShema";
@@ -8,4 +9,5 @@ export interface StateShema {
   user: UserShema;
   login: LoginShema;
   register: RegisterShema;
+  cart: CartShema;
 }

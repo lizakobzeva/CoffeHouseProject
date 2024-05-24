@@ -44,7 +44,7 @@ const RegisterForm = () => {
           {...register("name", { required: true })}
           type="text"
           className={style.formStyle}
-          placeholder={t("Your Email")}
+          placeholder={t("Your Name")}
         />
       </div>
       <div className={style.formGroup}>

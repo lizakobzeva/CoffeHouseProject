@@ -12,6 +12,8 @@
   --font-size-xl: 28px;
   --container-max-width: 1200px;
 
+  $animation-easing: cubic-bezier(0.645, 0.045, 0.355, 1);
+
   h1 {
     font-size: 60px;
   }
@@ -20,5 +22,18 @@
   }
   h3 {
     font-size: 30px;
+  }
+  ul,
+  li {
+    list-style: none;
+  }
+
+  @keyframes coffee-labels-active {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 }

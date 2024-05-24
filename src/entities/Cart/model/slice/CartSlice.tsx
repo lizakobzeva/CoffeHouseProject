@@ -8,13 +8,13 @@ export const userSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    AddItemInCart: (state, action: PayloadAction<string>) => {
-      state.cart?.push(action.payload);
+    SetItemInCart: (state, action: PayloadAction<Array<string>>) => {
+      state.cart = action.payload;
     },
     initCart: (state) => {
       const user = localStorage.getItem(USER_LOCALSTORAGE_KEY);
       if (user) {
-        state.cart = JSON.parse(user).user.cart;
+        state.cart = JSON.parse(user).cart;
       }
     },
     // logout: (state) => {
@@ -24,6 +24,6 @@ export const userSlice = createSlice({
   },
 });
 
-export const { AddItemInCart, initCart } = userSlice.actions;
+export const { SetItemInCart, initCart } = userSlice.actions;
 
 export default userSlice.reducer;

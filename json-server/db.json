@@ -11,24 +11,21 @@
     },
     {
       "email": "lizakob@list.ru",
-      "password": "$2a$10$Q0hgfbgK37atLLp0UF1Q3ONJl2zrqTF6z/otstqkcf96UBIo1YNfy",
+      "password": "$2a$10$jed.s7njAHYOu2t6hhsYLOY/yutpi1zJBOslycdGuxOCqI3sG0hSG",
       "name": "liza",
       "cart": [
-        "doppio",
+        "",
+        "mochabreve",
+        "mocha",
+        "cappuccino",
         "flatwhite",
         "doppio",
         "bombon",
-        "macchiatto",
-        "macchiatto",
+        "latte",
+        "latte",
+        "mochabreve",
         "bombon",
-        "macchiatto",
-        "macchiatto",
-        "macchiatto",
-        "cortado",
-        "americano",
-        "doppio",
-        "doppio",
-        "macchiatto"
+        "flatwhite"
       ],
       "id": "sStloF8",
       "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxpemFrb2JAbGlzdC5ydSIsImlhdCI6MTcxNjE5Mjk3NywiZXhwIjoxNzE2MTk2NTc3LCJzdWIiOiJzU3Rsb0Y4In0.Fu92NdGCwbu8B9MIeBjH47q1LBcAeJRIcqtr7pj-nE4"
