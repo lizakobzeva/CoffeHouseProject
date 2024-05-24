@@ -1,6 +1,7 @@
 import { AboutPage } from "pages/AboutPage";
 import CartPage from "pages/CartPage/ui/CartPage";
 import { CoffeePage } from "pages/CoffeePage";
+import CoffeeSizePage from "pages/CoffeeSizePage/ui/CoffeeSizePage";
 
 import { MainPage } from "pages/MainPage";
 import NotFoundPage from "pages/NotFoundPage";
@@ -12,12 +13,14 @@ export enum AppRoutes {
   COFFEE = "coffee",
   NOT_FOUND = "not_found",
   CART = "cart",
+  COFFEESIZE = "cofeesize",
 }
 
 export const RoutePath: Record<AppRoutes, string> = {
   [AppRoutes.MAIN]: "/main",
   [AppRoutes.ABOUT]: "/about",
   [AppRoutes.CART]: "/cart",
+  [AppRoutes.COFFEESIZE]: "/coffeesize/:coffeeid",
   [AppRoutes.COFFEE]: "/",
 
   [AppRoutes.NOT_FOUND]: "*",
@@ -39,6 +42,10 @@ export const routeConfig: Array<RouteProps> = [
   {
     path: RoutePath.cart,
     element: <CartPage />,
+  },
+  {
+    path: RoutePath.cofeesize,
+    element: <CoffeeSizePage />,
   },
   {
     path: RoutePath.not_found,

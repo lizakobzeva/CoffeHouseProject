@@ -6,6 +6,7 @@ import { USER_LOCALSTORAGE_KEY } from "shared/const/localStorage";
 import { LoginRegisterModal } from "features/AuthByEmail/ui";
 import { useSelector } from "react-redux";
 import { getAuthData } from "entities/User/model/selectors/getAuthData/getAuthData";
+import { Link } from "react-router-dom";
 const CoffeePage = () => {
   const [activeCoffeeId, setActiveCoffeeId] = useState("espresso");
   const user = localStorage.getItem(USER_LOCALSTORAGE_KEY);
@@ -183,7 +184,11 @@ const CoffeePage = () => {
                 Back
               </Button>
               {user ? (
-                <AddInCartButton coffeeId={activeCoffeeId} />
+                // <AddInCartButton coffeeId={activeCoffeeId} />
+
+                <Link to={`/coffeesize/${activeCoffeeId}`}>
+                  <Button>AddInCart</Button>
+                </Link>
               ) : (
                 <>
                   <Button type="button" onClick={() => setIsModal(true)}>

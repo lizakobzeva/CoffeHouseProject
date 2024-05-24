@@ -8,9 +8,10 @@ import Button from "shared/ui/Button";
 
 interface AddInCartButtonType {
   coffeeId: string;
+  coffeeSize: number;
 }
 
-const AddInCartButton = ({ coffeeId }: AddInCartButtonType) => {
+const AddInCartButton = ({ coffeeId, coffeeSize }: AddInCartButtonType) => {
   const dispatch = useAppDispatch();
   const { authData } = useSelector(getAuthData);
   const cart: Array<string> = authData?.cart ? authData?.cart : [];
@@ -24,9 +25,9 @@ const AddInCartButton = ({ coffeeId }: AddInCartButtonType) => {
     dispatch(AddItemInCart(userData));
   };
   return (
-    <Button type="button" onClick={() => AddInCart()}>
-      <Link to={"/cart"}>
-        Add
+    <Link to={"/cart"}>
+      <Button type="button" onClick={() => AddInCart()}>
+        Add In Cart
         <svg
           width="20px"
           height="20px"
@@ -49,8 +50,8 @@ const AddInCartButton = ({ coffeeId }: AddInCartButtonType) => {
             fill="currentColor"
           />
         </svg>
-      </Link>
-    </Button>
+      </Button>
+    </Link>
   );
 };
 

@@ -8,7 +8,22 @@
 }
 $animation-easing: cubic-bezier(0.645, 0.045, 0.355, 1);
 .CartPage {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   .cartList {
     animation: coffee-labels-active 0.5s 0.2s $animation-easing both;
+  }
+  .CartBox {
+    color: var(--color2);
+    background-color: var(--color5);
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    border-radius: 10px;
   }
 }
