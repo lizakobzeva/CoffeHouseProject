@@ -42,7 +42,7 @@ const NavBar = () => {
             }
             to={"/"}
           >
-            Coffee
+            {t("Coffee")}
           </NavLink>
           <NavLink
             className={({ isActive }) =>
@@ -50,7 +50,7 @@ const NavBar = () => {
             }
             to={"/cart"}
           >
-            Cart
+            {t("Cart")}
           </NavLink>
         </div>
 

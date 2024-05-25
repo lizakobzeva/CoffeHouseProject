@@ -1,12 +1,12 @@
 import Button from "shared/ui/Button";
 import "./CoffeePage.scss";
-import { AddInCartButton } from "features/CartOperations/ui";
 import { useEffect, useState } from "react";
 import { USER_LOCALSTORAGE_KEY } from "shared/const/localStorage";
 import { LoginRegisterModal } from "features/AuthByEmail/ui";
 import { useSelector } from "react-redux";
 import { getAuthData } from "entities/User/model/selectors/getAuthData/getAuthData";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 const CoffeePage = () => {
   const [activeCoffeeId, setActiveCoffeeId] = useState("espresso");
   const user = localStorage.getItem(USER_LOCALSTORAGE_KEY);
@@ -30,6 +30,8 @@ const CoffeePage = () => {
     "flatwhite",
     "bombon",
   ];
+
+  const { t } = useTranslation("coffee");
   return (
     <>
       <div className="CoffeePage">
@@ -49,101 +51,107 @@ const CoffeePage = () => {
             <div className="coffee-title">
               <nav className="coffee-labels">
                 <label htmlFor="doppio">
-                  <span>Doppio</span>
+                  <span>{t("Doppio")}</span>
                   <p>
-                    Doppio in espresso is a double shot, extracted using a
-                    double coffee filter in the portafilter.
+                    {t(
+                      "Doppio in espresso is a double shot, extracted using a double coffee filter in the portafilter."
+                    )}
                   </p>
                 </label>
                 <label htmlFor="macchiatto">
-                  <span>Macchiatto</span>
+                  <span>{t("Macchiatto")}</span>
                   <p>
-                    A caffè macchiato, sometimes called espresso macchiato, is
-                    an espresso coffee drink with a small amount of milk added,
-                    today usually foamed milk.
+                    {t(
+                      "A caffè macchiato, sometimes called espresso macchiato, is an espresso coffee drink with a small amount of milk added, today usually foamed milk."
+                    )}
                   </p>
                 </label>
                 <label htmlFor="cortado">
-                  <span>Cortado</span>
+                  <span>{t("Cortado")}</span>
                   <p>
-                    A cortado (from the Spanish verb "cortar" - to cut) is an
-                    espresso cut with a small amount of warm milk.
+                    {t(
+                      'A cortado (from the Spanish verb "cortar" - to cut) is an espresso cut with a small amount of warm milk.'
+                    )}
                   </p>
                 </label>
                 <label htmlFor="cappuccino">
-                  <span>Cappuccino</span>
+                  <span>{t("Cappuccino")}</span>
                   <p>
-                    A cappuccino (from the Capuchin friars) is an Italian coffee
-                    drink which is traditionally prepared with espresso, hot
-                    milk and steamed-milk foam.
+                    {t(
+                      " A cappuccino (from the Capuchin friars) is an Italian coffee drink which is traditionally prepared with espresso, hot milk and steamed-milk foam."
+                    )}
                   </p>
                 </label>
                 <label htmlFor="americano">
-                  <span>Americano</span>
+                  <span>{t("Americano")}</span>
                   <p>
-                    A caffè americano is a style of coffee prepared by adding
-                    hot water to espresso, giving it a similar strength to, but
-                    different flavor from, regular drip coffee.
+                    {t(
+                      "A caffè americano is a style of coffee prepared by adding hot water to espresso, giving it a similar strength to, but different flavor from, regular drip coffee."
+                    )}
                   </p>
                 </label>
                 <label htmlFor="mocha">
-                  <span>Mocha</span>
+                  <span>{t("Mocha")}</span>
                   <p>
-                    A caffè mocha is based on espresso and hot milk, but with
-                    added chocolate, typically in the htmlForm of sweet cocoa
-                    powder, although many varieties use chocolate syrup.
+                    {t(
+                      "A caffè mocha is based on espresso and hot milk, but with added chocolate, typically in the htmlForm of sweet cocoa powder, although many varieties use chocolate syrup."
+                    )}
                   </p>
                 </label>
                 <label htmlFor="latte">
-                  <span>Latte</span>
+                  <span>{t("Latte")}</span>
                   <p>
-                    A caffè latte is a coffee drink made with espresso and
-                    steamed milk. The term is Italian htmlFor "milk coffee."
+                    {t(
+                      'A caffè latte is a coffee drink made with espresso and steamed milk. The term is Italian htmlFor "milk coffee."'
+                    )}
                   </p>
                 </label>
                 <label htmlFor="breve">
-                  <span>Breve</span>
+                  <span>{t("Breve")}</span>
                   <p>
-                    A caffè breve is an American variation of a latte: a
-                    milk-based espresso drink using steamed half-and-half
-                    mixture of milk and cream instead of milk.
+                    {t(
+                      "A caffè breve is an American variation of a latte: a milk-based espresso drink using steamed half-and-half mixture of milk and cream instead of milk."
+                    )}
                   </p>
                 </label>
                 <label htmlFor="mochabreve">
-                  <span>Mocha Breve</span>
+                  <span>{t("Mocha Breve")}</span>
                   <p>
-                    A mocha breve is similar to a caffè breve with an added
-                    ounce of cocoa powder or chocolate syrup.
+                    {t(
+                      "A mocha breve is similar to a caffè breve with an added ounce of cocoa powder or chocolate syrup."
+                    )}
                   </p>
                 </label>
                 <label htmlFor="flatwhite">
-                  <span>Flat White</span>
+                  <span>{t("Flat White")}</span>
                   <p>
-                    A flat white is prepared by pouring microfoam (steamed milk
-                    with small, fine bubbles and a glossy or velvety
-                    consistency) over a single or double shot of espresso.
+                    {t(
+                      "A flat white is prepared by pouring microfoam (steamed milk with small, fine bubbles and a glossy or velvety consistency) over a single or double shot of espresso."
+                    )}
                   </p>
                 </label>
                 <label htmlFor="bombon">
-                  <span>Café Bombón</span>
+                  <span>{t("Café Bombón")}</span>
                   <p>
-                    A café bombón is a popular Spanish coffee drink made with
-                    espresso served with sweetened condensed milk in a 1:1
-                    ratio.
+                    {t(
+                      "A café bombón is a popular Spanish coffee drink made with espresso served with sweetened condensed milk in a 1:1 ratio."
+                    )}
                   </p>
                 </label>
               </nav>
             </div>
             <a href="#" className="coffee-info" tabIndex={1}>
               <div className="coffee-recipe">
-                <div className="recipe-foam">milk foam</div>
-                <div className="recipe-steam">steamed milk</div>
-                <div className="recipe-water">hot water</div>
-                <div className="recipe-half">half &amp; half</div>
-                <div className="recipe-chocolate">chocolate</div>
+                <div className="recipe-foam">{t("milk foam")}</div>
+                <div className="recipe-steam">{t("steamed milk")}</div>
+                <div className="recipe-water">{t("hot water")}</div>
+                <div className="recipe-half">
+                  {t("half")} &amp; {t("half")}
+                </div>
+                <div className="recipe-chocolate">{t("chocolate")}</div>
                 <div className="recipe-crema"></div>
-                <div className="recipe-espresso">espresso</div>
-                <div className="recipe-condensed">condensed milk</div>
+                <div className="recipe-espresso">{t("espresso")}</div>
+                <div className="recipe-condensed">{t("condensed milk")}</div>
               </div>
               <div className="coffee-cup">
                 <div className="coffee-steam">

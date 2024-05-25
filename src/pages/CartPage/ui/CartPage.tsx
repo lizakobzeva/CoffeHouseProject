@@ -9,6 +9,7 @@ import Modal from "shared/ui/Modal";
 import { USER_LOCALSTORAGE_KEY } from "shared/const/localStorage";
 import { useAppDispatch } from "app/providers/StoreProvider";
 import { ClearCart } from "features/CartOperations/model/services/AddItemInCart/ClearCart";
+import { useTranslation } from "react-i18next";
 interface IDictionary {
   [key: string]: Array<number>;
 }
@@ -32,6 +33,7 @@ const CartPage = () => {
   const [IsModal, setIsModal] = useState(false);
   const authData = useSelector(getAuthData);
   let { cart } = useSelector(getCart);
+  const { t } = useTranslation();
   const dispatch = useAppDispatch();
 
   useEffect(() => {}, [cart]);
@@ -59,23 +61,18 @@ const CartPage = () => {
                 <li>
                   {(coffeeId = typeof cartItem[0] == "string" && cartItem[0])}{" "}
                   {(coffeeSize = typeof cartItem[1] == "number" && cartItem[1])}{" "}
-                  мл.
-                  {coffeeDictionary[coffeeId][coffeeSize / 100 - 3]} руб.
+                  {t("ml.")}
+                  {coffeeDictionary[coffeeId][coffeeSize / 100 - 3]} {t("rub.")}
                 </li>
               ))}
             </ul>
-            <Button onClick={Chekout}>Оформить Заказ</Button>
+            <Button onClick={Chekout}>{t("Place an order")}</Button>
           </div>
-          <Modal isOpend={IsModal} onClose={() => setIsModal(false)}>
-            <div className={style.CartBox}>
-              <h2>Заказ Оформлен</h2>
-            </div>
-          </Modal>
         </>
       ) : (
         <>
           <div className={style.EmptyCart}>
-            <h2>Корзина пуста</h2>
+            <h2>{t("Cart is empty")}</h2>
             <Link to={`/`}>
               <Button>
                 <svg
@@ -93,12 +90,17 @@ const CartPage = () => {
                     stroke-linejoin="round"
                   />
                 </svg>
-                Выбрать кофе
+                {t("Choose a coffee")}
               </Button>
             </Link>
           </div>
         </>
       )}
+      <Modal isOpend={IsModal} onClose={() => setIsModal(false)}>
+        <div className={style.CartBox}>
+          <h2>{t("Order is placed")}</h2>
+        </div>
+      </Modal>
     </div>
   );
 };

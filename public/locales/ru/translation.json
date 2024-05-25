@@ -9,5 +9,15 @@
   "Your Password": "Ваш пароль",
   "Submit": "Продолжить",
   "Forgot your password?": "Забыли пароль?",
-  "Your Full Name": "Ваше полное имя"
+  "Your Full Name": "Ваше полное имя",
+  "Coffee": "Кофе",
+  "Cart": "Корзина",
+  "ml.": "мл.",
+  "rub.": "руб.",
+  "Cart is empty": "Корзина пуста",
+  "Place an order": "Оформить Заказ",
+  "Choose a coffee": "Выбрать кофе",
+  "Order is placed": "Заказ Оформлен",
+  "Choose a size": "Выберите размер",
+  "Log Out": "Выйти"
 }

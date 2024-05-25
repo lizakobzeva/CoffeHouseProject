@@ -5,12 +5,15 @@ import { useAppDispatch } from "app/providers/StoreProvider";
 import { logout } from "entities/User/model/slice/UserSlice";
 import { USER_LOCALSTORAGE_KEY } from "shared/const/localStorage";
 import { SetItemInCart } from "entities/Cart/model/slice/CartSlice";
+import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 
 // interface AvatarProps {
 //   name: string;
 // }
 
 const Avatar = () => {
+  const { t } = useTranslation();
   const dispatch = useAppDispatch();
   const [isOpen, setIsOpen] = useState(false);
   const user = localStorage.getItem(USER_LOCALSTORAGE_KEY);
@@ -111,7 +114,7 @@ const Avatar = () => {
         }}
         style={{ pointerEvents: isOpen ? "auto" : "none" }}
       >
-        <p>Log Out </p>
+        <p>{t("Log Out")} </p>
         <svg
           width="25px"
           height="25px"

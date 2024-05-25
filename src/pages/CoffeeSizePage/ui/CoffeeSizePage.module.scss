@@ -16,7 +16,9 @@
     border-radius: 10px;
   }
 }
-
+.CoffeeSizeTitle {
+  text-align: center;
+}
 .CoffeeSize {
   $primary-color: #00005c; // Change color here. C'mon, try it!
   $text-color: mix(#000, $primary-color, 64%);

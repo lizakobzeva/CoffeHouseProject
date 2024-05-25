@@ -9,5 +9,16 @@
   "Your Password": "Your Password",
   "Submit": "Submit",
   "Forgot your password?": "Forgot your password?",
-  "Your Full Name": "Your Full Name"
+  "Your Full Name": "Your Full Name",
+
+  "Coffee": "Coffee",
+  "Cart": "Cart",
+  "ml.": "ml.",
+  "rub.": "rub.",
+  "Cart is empty": "Cart is empty",
+  "Place an order": "Place an order",
+  "Choose a coffee": "Choose a coffee",
+  "Order is placed": "Order is placed",
+  "Choose a size": "Choose a size",
+  "Log Out": "Log Out"
 }
