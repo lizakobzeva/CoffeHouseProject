@@ -25,7 +25,7 @@ const CoffeeSizePage = () => {
                     name="radio"
                     onClick={() => setCoffeeSize(300)}
                   />
-                  <span>300 мл</span>
+                  <span>300 {t("ml.")}</span>
                 </label>
                 <label>
                   <input
@@ -33,7 +33,7 @@ const CoffeeSizePage = () => {
                     name="radio"
                     onClick={() => setCoffeeSize(400)}
                   />
-                  <span>400 мл</span>
+                  <span>400 {t("ml.")}</span>
                 </label>
                 <label>
                   <input
@@ -41,7 +41,7 @@ const CoffeeSizePage = () => {
                     name="radio"
                     onClick={() => setCoffeeSize(500)}
                   />
-                  <span>500 мл</span>
+                  <span>500 {t("ml.")}</span>
                 </label>
               </form>
             </div>
