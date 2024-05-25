@@ -26,4 +26,12 @@ $animation-easing: cubic-bezier(0.645, 0.045, 0.355, 1);
     gap: 20px;
     border-radius: 10px;
   }
+  .EmptyCart {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+  }
 }

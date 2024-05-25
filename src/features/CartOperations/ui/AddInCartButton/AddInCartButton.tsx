@@ -14,11 +14,13 @@ interface AddInCartButtonType {
 const AddInCartButton = ({ coffeeId, coffeeSize }: AddInCartButtonType) => {
   const dispatch = useAppDispatch();
   const { authData } = useSelector(getAuthData);
-  const cart: Array<string> = authData?.cart ? authData?.cart : [];
+  const cart: Array<Array<string | number>> = authData?.cart
+    ? authData?.cart
+    : [];
 
   const userData = {
     id: authData?.id,
-    cart: [...cart, coffeeId],
+    cart: [...cart, [coffeeId, coffeeSize]],
   };
   const AddInCart = () => {
     console.log(userData);
@@ -27,7 +29,7 @@ const AddInCartButton = ({ coffeeId, coffeeSize }: AddInCartButtonType) => {
   return (
     <Link to={"/cart"}>
       <Button type="button" onClick={() => AddInCart()}>
-        Add In Cart
+        Add
         <svg
           width="20px"
           height="20px"

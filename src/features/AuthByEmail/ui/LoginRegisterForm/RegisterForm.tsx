@@ -31,7 +31,7 @@ const RegisterForm = () => {
       name: data.name,
       email: data.email,
       password: data.password,
-      cart: [""],
+      cart: [["", 300]],
     };
     dispatch(RegisterByEmail(dataReg));
   };

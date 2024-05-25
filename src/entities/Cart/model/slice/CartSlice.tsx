@@ -8,7 +8,10 @@ export const userSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    SetItemInCart: (state, action: PayloadAction<Array<string>>) => {
+    SetItemInCart: (
+      state,
+      action: PayloadAction<Array<Array<string | number>>>
+    ) => {
       state.cart = action.payload;
     },
     initCart: (state) => {

@@ -1,3 +1,3 @@
 export interface CartShema {
-  cart?: Array<string>;
+  cart?: Array<Array<string | number>>;
 }

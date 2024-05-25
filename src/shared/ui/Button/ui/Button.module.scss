@@ -6,6 +6,10 @@
   background-color: var(--color2);
   color: var(--color1);
   filter: drop-shadow(1px 1px 1px var(--color6));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 .button:active {
   scale: 0.95;

@@ -7,7 +7,7 @@ import { USER_LOCALSTORAGE_KEY } from "shared/const/localStorage";
 
 export interface AddItemInCartTypes {
   id: string;
-  cart: Array<string>;
+  cart: Array<Array<string | number>>;
 }
 export const AddItemInCart = createAsyncThunk(
   "register/AddItemInCart",

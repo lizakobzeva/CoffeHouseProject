@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useAppDispatch } from "app/providers/StoreProvider";
 import { logout } from "entities/User/model/slice/UserSlice";
 import { USER_LOCALSTORAGE_KEY } from "shared/const/localStorage";
+import { SetItemInCart } from "entities/Cart/model/slice/CartSlice";
 
 // interface AvatarProps {
 //   name: string;
@@ -20,6 +21,7 @@ const Avatar = () => {
 
   const Logout = () => {
     dispatch(logout());
+    dispatch(SetItemInCart());
   };
   return (
     <motion.nav

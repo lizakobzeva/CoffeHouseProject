@@ -5,7 +5,9 @@
       "password": "$2a$10$LpWLbjNa8jVzzXnJ8ctg4./Q9tiGLYQ0HyCSzoP8UXe3mrjKF1zNm",
       "name": "sasha",
       "cart": [
-        ""
+        [
+          ""
+        ]
       ],
       "id": "x6ug4cY"
     },
@@ -14,18 +16,9 @@
       "password": "$2a$10$jed.s7njAHYOu2t6hhsYLOY/yutpi1zJBOslycdGuxOCqI3sG0hSG",
       "name": "liza",
       "cart": [
-        "",
-        "mochabreve",
-        "mocha",
-        "cappuccino",
-        "flatwhite",
-        "doppio",
-        "bombon",
-        "latte",
-        "latte",
-        "mochabreve",
-        "bombon",
-        "flatwhite"
+        [
+          ""
+        ]
       ],
       "id": "sStloF8",
       "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxpemFrb2JAbGlzdC5ydSIsImlhdCI6MTcxNjE5Mjk3NywiZXhwIjoxNzE2MTk2NTc3LCJzdWIiOiJzU3Rsb0Y4In0.Fu92NdGCwbu8B9MIeBjH47q1LBcAeJRIcqtr7pj-nE4"
@@ -35,11 +28,21 @@
       "password": "$2a$10$E5Tlqq3/k3E74ayXS6p3JOEZMB3BjFHVE.0w5Hgfgki2n/xX2RlRq",
       "name": "lizakobzeva",
       "cart": [
-        "",
-        "cappuccino",
-        "mochabreve",
-        "macchiatto",
-        "cappuccino"
+        [
+          ""
+        ],
+        [
+          "doppio",
+          500
+        ],
+        [
+          "mochabreve",
+          400
+        ],
+        [
+          "mocha",
+          400
+        ]
       ],
       "id": "RYI6LFU"
     },
@@ -48,21 +51,55 @@
       "password": "$2a$10$64.721nJCBbXIdPhkDynmundVrAIWS6TjAajcyCwkBQwd8wVeHqCa",
       "name": "cat",
       "cart": [
-        "",
-        "doppio",
-        "doppio",
-        "doppio",
-        "doppio",
-        "latte",
-        "latte",
-        "latte",
-        "latte",
-        "latte",
-        "mocha",
-        "doppio",
-        "mocha"
+        [
+          ""
+        ]
       ],
       "id": "-ba0hrx"
+    },
+    {
+      "email": "nastia@a.com",
+      "password": "$2a$10$QMbJ5VvY8YnZuChPpeA/9eNujCECoHARNRKbO59Qy58UVjRQkRVvy",
+      "name": "nastia",
+      "cart": [
+        [
+          "",
+          300
+        ],
+        [
+          "mocha",
+          500
+        ],
+        [
+          "breve",
+          400
+        ],
+        [
+          "macchiatto",
+          400
+        ],
+        [
+          "latte",
+          500
+        ]
+      ],
+      "id": "M0JsAV_"
+    },
+    {
+      "0": [
+        "",
+        0
+      ],
+      "email": "zomaro81014@gmail.com",
+      "password": "$2a$10$5fjTIaUNNTpWY49E64aNLe5Gra84.q1w3AoyycAYatj6dFymHsQtO",
+      "name": "Sergey",
+      "cart": [
+        [
+          "",
+          0
+        ]
+      ],
+      "id": "GUQjuW6"
     }
   ]
 }
